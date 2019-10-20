@@ -9,6 +9,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var currentChoice = Int.random(in: 0...2)
+    @State private var shouldWin = Bool.random()
+    
+    let moves = ["Scissors", "Paper", "Stone"]
+    
     var body: some View {
         Text("Hello World")
     }
