@@ -15,7 +15,10 @@ struct ContentView: View {
     let moves = ["Scissors", "Paper", "Stone"]
     
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Text(shouldWin ? "Win against" : "Lose against")
+            Text(moves[currentChoice])
+        }
     }
 }
 
