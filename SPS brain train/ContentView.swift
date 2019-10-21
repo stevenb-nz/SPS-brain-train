@@ -18,6 +18,15 @@ struct ContentView: View {
         VStack {
             Text(shouldWin ? "Win against" : "Lose against")
             Text(moves[currentChoice])
+            HStack {
+                ForEach(0 ..< moves.count) {move in
+                    Button(action: {
+                        // your action here
+                    }) {
+                        Text(self.moves[move])
+                    }
+                }
+            }
         }
     }
 }
